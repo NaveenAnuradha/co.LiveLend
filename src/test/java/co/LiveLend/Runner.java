@@ -1,0 +1,17 @@
+package co.LiveLend;
+
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features = "src/test/resources/featureFiles",
+        plugin = {"pretty", "html:target,cucumber-reports"},
+        tags = {"@smoke"},
+        glue = {"co.LiveLend", "steps"})
+
+
+
+public class Runner {
+}
